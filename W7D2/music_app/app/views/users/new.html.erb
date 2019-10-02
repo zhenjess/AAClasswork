@@ -1,0 +1,23 @@
+<form action="<%= users_url%>" method="post">
+  <input type="hidden" name="_method" value="post">
+  <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg%></li>
+    <% end %>
+  </ul>
+
+  <label for="username">Username:
+    <input type="text" id="username" name="user[username]" value="">
+  </label>
+
+  <br>
+
+  <label for="password">Password:
+    <input type="password" id="password" name="user[password]" value="">
+  </label>
+
+  <br>
+
+  <input type="submit" value="Sign Up">
+
+</form>
